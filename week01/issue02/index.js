@@ -23,7 +23,7 @@ const removeClass = tree => tree
 	.match({ attrs: {class: true} }, node => 
 	{
         let starterData = [];
-		let arrayClasses = node.attrs.class
+	let arrayClasses = node.attrs.class
             .split(' ')
             .filter(item => {
                 if (item.indexOf(starter)==0) starterData.push(item.substr(starter.length));
