@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
     watch = require('gulp-watch'),
-    browserSync = require('browser-sync');
+    browserSync = require('browser-sync'),
     postcss = require('gulp-postcss'),
     cssnext = require('cssnext');
 
@@ -24,13 +24,13 @@ gulp.task('css:build', function () {
         .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('build',['css:build']);
+gulp.task('build', ['css:build']);
 
-gulp.task('watch', function() {
-    watch(['./src/*.css'], function(event,cb) {
+gulp.task('watch', function () {
+    watch(['./src/*.css'], function (event, cb) {
         gulp.start('css:build');
     });
-})
+});
 
 gulp.task('webserver', function () {
     browserSync(config);

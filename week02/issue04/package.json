@@ -1,14 +1,17 @@
 {
-  "name": "form",
+  "name": "issue04",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "lolochka",
+  "author": "",
   "license": "ISC",
-  "dependencies": {
-    "gulp": "^3.9.1"
+  "devDependencies": {
+    "browser-sync": "^2.12.10",
+    "cssnext": "^1.8.4",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.1.1",
+    "gulp-watch": "^4.3.6"
   }
 }

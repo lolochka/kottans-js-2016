@@ -1,3 +1,122 @@
+/*Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+    all: unset;
+}
+/*Reset ends*/
+
+
 html {
-    background: gray;
+    background: #ECEEF4;
+    font-size: 15px;
+    line-height: 1.2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    max-width: 920px;
+    height: 206px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.head-logo {
+    width: 150px;
+    height: auto;
+}
+
+.go-back, .sign-in {
+    width: 250px;
+    height: 70px;
+    box-sizing: border-box;
+    color: #CDD3E3;
+    font-size: 22px;
+    font-weight: 700;
+    border: 2px solid #CDD3E3;
+    border-radius: 5px;
+    padding-left: 4%;
+    transition: color .3s, border-color .3s;
+    text-transform: uppercase;
+}
+
+.go-back:hover, .sign-in:hover {
+    color: #84A3D1;
+    border-color: #84A3D1;
+}
+
+.go-back:before, .sign-in:before {
+    content: url(src/images/arrow.png);
+    position: relative;
+    top: 10px;
+    margin-right: 10px;
+}
+
+.sign-in:before {
+    content: url(src/images/man.png);
+    top: 10px;
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+/*main*/
+main {
+    max-width: 920px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.order-form {
+    background-color: #fff;
+    border: 2px solid #CDD3E3;
+    border-radius: 5px;
 }
