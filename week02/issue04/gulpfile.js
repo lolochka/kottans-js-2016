@@ -18,7 +18,7 @@ gulp.task('css:build', function () {
     var processors = [
         cssnext()
     ];
-    return gulp.src('./src/*.css')
+    return gulp.src('./src/css/*.css')
         .pipe(postcss(processors))
         .pipe(gulp.dest('./dest'))
         .pipe(browserSync.reload({stream: true}));
@@ -27,7 +27,7 @@ gulp.task('css:build', function () {
 gulp.task('build', ['css:build']);
 
 gulp.task('watch', function () {
-    watch(['./src/*.css'], function (event, cb) {
+    watch(['./src/css/*.css'], function (event, cb) {
         gulp.start('css:build');
     });
 });

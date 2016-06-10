@@ -3,7 +3,7 @@
 	<head>
     	<meta charset=utf-8>
         <title>Form</title>
-        <link href="src/style.css" rel="stylesheet">
+        <link href="src/css/style.css" rel="stylesheet">
   	</head>
   	<body>
     	<header>
@@ -20,22 +20,24 @@
 		<main>
 			<form class="order-form">
 				<section class="your-order">
-					<h1>Your order</h1>
-					<table class="order-details">
-						<tr>
-							<th>Items</th>
-							<th>Details</th>
-							<th>Price</th>
-							<th>Delivery</th>
-						</tr>
-						<tr>
-							<td>2 documents</td>
-							<td>2 languages</td>
-							<td>$ 696.06</td>
-							<td>48 hours</td>
-						</tr>
-					</table>
-					<div>
+					<div class="your-order-table-wrap">
+						<h1>Your order</h1>
+						<table class="order-details">
+							<tr>
+								<th>Items</th>
+								<th>Details</th>
+								<th>Price</th>
+								<th>Delivery</th>
+							</tr>
+							<tr>
+								<td>2 documents</td>
+								<td>2 languages</td>
+								<td>$ 696.06</td>
+								<td>48 hours</td>
+							</tr>
+						</table>
+					</div>
+					<div class="your-order-btns-wrap">
 						<button class="place-order">
 							place order
 						</button>
@@ -47,43 +49,52 @@
 				<section class="help-center">
 					<h1>Help center</h1>
 					<p>if you need asistance while placing your order? contact one of our beloved Project Manager by phone or email</p>
+					<p>
 					<address>
-						<a href="tel:971-0-555-555">+971 (0) 555 555</a>
-						<a href="mailto:help@qtest.com">help@qtest.com</a>
+						<a href="tel:971-0-555-555">+971 (0) 555 555</a> <a href="mailto:help@qtest.com">help@qtest.com</a>
 					</address>
+					</p>
 				</section>
 				<section class="select-service">
-					<h1>Select what you want to translate</h1>
+					<h1><span>Select what you want to translate</span></h1>
 					<input type="radio" name="service" value="website" id="website">
-					<label for="website">Website</label>
+					<label for="website">
+						<img src="images/website.png" alt="Website translation" title="Translate website">
+					</label>
 					<input type="radio" name="service" value="documents" id="documents">
-					<label for="documents">Documents</label>
+					<label for="documents">
+						<span><img src="images/documents.png" alt="Translate documents" title="Translate documents"></span>
+					</label>
 					<input type="radio" name="service" value="social" id="social">
-					<label for="social">Social Account</label>
+					<label for="social">
+						<img src="images/social.png" alt="Translate social account" title="Translate social account">
+					</label>
 				</section>
 				<section class="uploading-document">
 					<h1>Upload your documents <small>(Doc, Docx, Text, Pdf, Markdown)</small></h1>
-					<p><button class="upload-file">Upload new file</button></p>
-					<table class="uploaded-files">
-						<tr>
-							<th>File name</th>
-							<th>File size</th>
-							<th>Number of words</th>
-							<th>Remove</th>
-						</tr>
-						<tr>
-							<td>business_operations.docx</td>
-							<td>78kB</td>
-							<td>842</td>
-							<td><span class="delete" role="button">X</span></td>
-						</tr>
-						<tr>
-							<td>business_financial.docx</td>
-							<td>26kB</td>
-							<td>2,326</td>
-							<td><span class="delete" role="button">X</span></td>
-						</tr>
-					</table>
+					<p><button class="upload-file-btn">Upload new file</button></p>
+					<div class="uploaded-files-table-wrap">
+						<table class="uploaded-files-table">
+							<tr>
+								<th>File name</th>
+								<th>File size</th>
+								<th>Number of words</th>
+								<th class="remove-file">Remove</th>
+							</tr>
+							<tr>
+								<td class="file-name">business_operations.docx</td>
+								<td>78kB</td>
+								<td>842</td>
+								<td class="remove-file"><i class="icon-trash" role="button"></i></td>
+							</tr>
+							<tr>
+								<td class="file-name">business_financial.docx</td>
+								<td>26kB</td>
+								<td>2,326</td>
+								<td class="remove-file"><i class="icon-trash" role="button"></i></td>
+							</tr>
+						</table>
+					</div>
 				</section>
 				<section class="choosing-language">
 					<h1>Choose your languages pairings</h1>
@@ -110,8 +121,8 @@
 							<option value="de">German</option>
 							<option value="es">Spanish</option>
 						</select>
-						<span class="delete" role="button">X</span>
-						<button class="add-language">Add</button>
+						<i class="icon-trash" role="button"></i>
+						<button class="add-language-btn">+ Add</button>
 					</p>
 				</section>
 				<section class="selecting-tone">
@@ -125,9 +136,16 @@
 				</section>
 				<section class="how-urgent">
 					<h1>Tell us how urgent this job is</h1>
-					<input type="range" min="0" value="1" max="2" step="1">
+					<div class="urgent-range-wrap">
+						<input class="urgent-range" type="range" min="0" value="1" max="2" step="1">
+						<ul class="urgent-range-labels">
+							<li>I got time</li>
+							<li>Average</li>
+							<li>Yesterday</li>
+						</ul>
+					</div>
 					<section class="timeline-info">
-						<h1>Timeline info</h1>
+						<h2>Timeline info</h2>
 						<p>With an <output>Average</output> timeline set up, our expert translator can take a reasonable amount of time perfecting your translation</p>
 					</section>
 				</section>
@@ -135,16 +153,19 @@
 					<h1>Sign up and choose a payment method</h1>
 					<p>Already have an account with us? <a href="#">Sign in</a></p>
 					<p>
-						<label for="name">Full name</label><br>
-						<input type="text" id="name" name="full-name">
+						<label for="name">Full name<br>
+							<input type="text" id="name" name="full-name">
+						</label>
 					</p>
 					<p>
-						<label for="email">Email address</label><br>
-						<input type="email" id="email" name="email">
+						<label for="email">Email address<br>
+							<input type="email" id="email" name="email">
+						</label>
 					</p>
 					<p>
-						<label for="password">Choose a password</label><br>
-						<input type="password" id="password" name="password">
+						<label for="password">Choose a password<br>
+							<input type="password" id="password" name="password">
+						</label>
 					</p>
 					<p>
 						<input type="radio" name="payment-method" value="card" id="card">
