@@ -244,7 +244,7 @@ main {
 	line-height: 50px;
 }
 
-.select-service input[type="radio"], .selecting-tone input[type="radio"]{
+.select-service input[type="radio"], .selecting-tone input[type="radio"], .payment-method input[type="radio"]{
   	border: 0; 
   	clip: rect(0 0 0 0); 
   	height: 1px; margin: -1px; 
@@ -254,7 +254,7 @@ main {
   	width: 1px;
 }
 
-.select-service label, .selecting-tone label {
+.select-service label, .selecting-tone label, .payment-method label {
 	width: 250px;
 	height: 170px;
 	margin-right: 10px;
@@ -273,12 +273,12 @@ main {
 	width: 150px;
 }
 
-.select-service label:hover, [type="radio"]:checked + label, .selecting-tone label:hover{
+.select-service label:hover, [type="radio"]:checked + label, .selecting-tone label:hover, .payment-method label:hover{
 	border: 4px solid #76A7E1;
 	padding: 7px;
 }
 
-[type="radio"]:checked + label::after{
+[type="radio"]:checked + label::after, .user-details input:valid ~ .validation::after, .user-details input:invalid ~ .validation::after {
 	content: '\e80b';
 	font-family: 'fontello';
 	position: absolute;
@@ -593,3 +593,86 @@ input[type=range][disabled] {
 	text-transform: uppercase;
 	font-weight: 700;
 }
+
+/*Payment*/
+.user-details, .card-details {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+} 
+.user-details label, .card-details label{
+	display: inline-block;
+	margin-top: 40px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.user-details input, .card-details input {
+	width: 250px;
+    height: 45px;
+	border: 1px solid #CDD3E3;
+	background-color: #F7F7FA;
+	border-radius: 5px;
+	color: #6E768F;
+	padding-left: 30px;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+
+.user-details input:valid ~ .validation::after, .user-details input:invalid ~ .validation::after{
+	position: relative;
+	text-align: center;
+	top: 0px;
+	left: -50px;
+}
+
+.user-details input:invalid ~ .validation::after {
+	content: '\e80c';
+	background-color: #E17776;
+}
+
+.payment-method {
+	margin-top: 60px;
+	margin-bottom: 30px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+
+.payment-method label {
+	display: inline-block;
+	height: 100px;
+	width: 250px;
+}
+
+.payment-method label img {
+	height: 50px;
+	margin-top: 15px;
+}
+
+.card-details input[type="date"] {
+	width: 130px;
+}
+
+.card-details input[name="code"] {
+	width: 70px;
+	-webkit-text-security: disc;
+}
+
+.card-details input[type="date"]::-webkit-clear-button, .card-details input[type="date"]::-webkit-inner-spin-button, .card-details input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+

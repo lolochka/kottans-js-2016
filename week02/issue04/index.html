@@ -152,43 +152,40 @@
 				<section class="payment">
 					<h1>Sign up and choose a payment method</h1>
 					<p>Already have an account with us? <a href="#">Sign in</a></p>
-					<p>
+					<p class="user-details">
 						<label for="name">Full name<br>
 							<input type="text" id="name" name="full-name">
+							<i class="validation"></i>
 						</label>
 					</p>
-					<p>
+					<p class="user-details">
 						<label for="email">Email address<br>
 							<input type="email" id="email" name="email">
+							<i class="validation"></i>
 						</label>
-					</p>
-					<p>
 						<label for="password">Choose a password<br>
 							<input type="password" id="password" name="password">
+							<i class="validation"></i>
 						</label>
 					</p>
-					<p>
+					<p class="payment-method">
 						<input type="radio" name="payment-method" value="card" id="card">
-						<label for="card">card</label>
+						<label for="card"><img src="images/card.png" alt="Card"></label>
 						<input type="radio" name="payment-method" value="paypal" id="paypal">
-						<label for="paypal">paypal</label>
+						<label for="paypal"><img src="images/paypal.png" alt="Paypal"></label>
 						<input type="radio" name="payment-method" value="amazon" id="amazon">
-						<label for="amazon">amazon</label>
+						<label for="amazon"><img src="images/amazon.png" alt="Amazon"></label>
 					</p>
-					<ul class="card-ifo">
-						<li>
-							<label for="card-number">Card number</label>
+					<p class="card-details">		<label for="card-number">Card number<br>
 							<input type="text" name="card-number" id="card-number">
-						</li>
-						<li>
-							<label for="exp-date">Expiry date</label>
+						</label>
+						<label for="exp-date">Expiry date<br>
 							<input type="date" name="exp-date" id="exp-date">
-						</li>
-						<li>
-							<label for="code">Code</label>
+						</label>
+						<label for="code">Code<br>
 							<input type="number" name="code" id="code">
-						</li>
-					</ul>
+						</label>
+					</p>
 				</section>
 				<footer class="submit-form">
 					<input type="checkbox" name="terms">I agree <a href="#">Terms &amp; Conditions</a>
