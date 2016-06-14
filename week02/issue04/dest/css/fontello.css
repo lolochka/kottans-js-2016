@@ -34,6 +34,9 @@
   /* opacity: .8; */
  
   /* For safety - reset parent styles, that can break glyph codes*/
+  -webkit-font-feature-settings: normal;
+     -moz-font-feature-settings: normal;
+          font-feature-settings: normal;
   font-variant: normal;
   text-transform: none;
  

@@ -2,7 +2,8 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     browserSync = require('browser-sync'),
     postcss = require('gulp-postcss'),
-    cssnext = require('cssnext');
+    cssnext = require('cssnext'),
+	allUnset = require('postcss-all-unset');
 
 var config = {
     server: {
@@ -16,15 +17,22 @@ var config = {
 
 gulp.task('css:build', function () {
     var processors = [
-        cssnext()
+        cssnext(),
+		allUnset()
     ];
     return gulp.src('./src/css/*.css')
         .pipe(postcss(processors))
-        .pipe(gulp.dest('./dest'))
+        .pipe(gulp.dest('./dest/css'))
         .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('build', ['css:build']);
+gulp.task('html:build', function() {
+	return gulp.src('./src/*.html')
+		.pipe(gulp.dest('./dest'))
+		.pipe(browserSync.reload({stream: true}));
+})
+
+gulp.task('build', ['css:build', 'html:build']);
 
 gulp.task('watch', function () {
     watch(['./src/css/*.css'], function (event, cb) {

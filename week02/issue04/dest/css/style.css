@@ -10,17 +10,14 @@ header {
     max-width: 1190px;
     height: 210px;
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     margin-left: auto;
     margin-right: auto;
     -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-box-align: center;
-    -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
     padding-left: 20px;
@@ -74,19 +71,16 @@ main {
     border: 2px solid #CDD3E3;
     border-radius: 5px;
 	display: -webkit-box;
-	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-flex-wrap: wrap;
-	    -ms-flex-wrap: wrap;
-	        flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 
 /*Your order*/
 .your-order, .help-center {
 	border-bottom: 1px solid #CDD3E3;
     -webkit-box-flex: 68%;
-    -webkit-flex: 68%;
         -ms-flex: 68%;
             flex: 68%;
 	padding-top: 36px;
@@ -96,11 +90,9 @@ main {
 }
 .your-order {
 	display: -webkit-box;
-	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
     -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
 }
@@ -168,7 +160,6 @@ main {
 
 .help-center {
 	-webkit-box-flex: 30%;
-	-webkit-flex: 30%;
 	    -ms-flex: 30%;
 	        flex: 30%;
 	border-left: 1px solid #CDD3E3;
@@ -200,7 +191,6 @@ main {
 }
 .uploading-document, .choosing-language, .payment, .select-service, .payment, .how-urgent, .submit-form {
 	-webkit-box-flex: 1;
-	-webkit-flex: 1 100%;
 	    -ms-flex: 1 100%;
 	        flex: 1 100%;
 }
@@ -208,21 +198,17 @@ main {
 .select-service {
 	padding-top: 80px;
 	display: -webkit-box;
-	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-flex-wrap: wrap;
-	    -ms-flex-wrap: wrap;
-	        flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between
 }
 
 .select-service h1 {
 	-webkit-box-flex: 100%;
-	-webkit-flex: 100%;
 	    -ms-flex: 100%;
 	        flex: 100%;
 	text-align: center;
@@ -421,7 +407,6 @@ main {
 /*Select tone*/
 .selecting-tone {
 	-webkit-box-flex: 40%;
-	-webkit-flex: 40%;
 	    -ms-flex: 40%;
 	        flex: 40%;
 }
@@ -454,7 +439,6 @@ main {
 /*How urgent*/
 .how-urgent {
 	-webkit-box-flex: 60%;
-	-webkit-flex: 60%;
 	    -ms-flex: 60%;
 	        flex: 60%;
 	position: relative;
@@ -540,11 +524,9 @@ input[type=range][disabled] {
 
 .urgent-range-labels {
 	display: -webkit-box;
-	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 	color: #6E768F;
@@ -595,12 +577,10 @@ input[type=range][disabled] {
 /*Payment*/
 .user-details, .card-details {
 	display: -webkit-box;
-	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-flex-wrap: wrap;
-	    -ms-flex-wrap: wrap;
-	        flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 } 
 .user-details label, .card-details label{
 	display: inline-block;
@@ -657,20 +637,16 @@ input[type=range][disabled] {
 
 .submit-form {
 	display: -webkit-box;
-	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: end;
-	-webkit-justify-content: flex-end;
 	    -ms-flex-pack: end;
 	        justify-content: flex-end;
 	-webkit-box-align: baseline;
-	-webkit-align-items: baseline;
 	    -ms-flex-align: baseline;
 	        align-items: baseline;
-	-webkit-flex-wrap: wrap;
-	    -ms-flex-wrap: wrap;
-	        flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 
 .submit-form input, .submit-form button {
@@ -691,14 +667,11 @@ input[type=range][disabled] {
     margin-right: auto;
 	box-sizing: border-box;
 	display: -webkit-box;
-	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-flex-wrap: wrap;
-	    -ms-flex-wrap: wrap;
-	        flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 	padding-top: 50px;

@@ -50,9 +50,12 @@ table {
 	border-spacing: 0;
 }
 
-a, button, label {
+a, button, label{
 	all: unset;
 	box-sizing: border-box;
+}
+
+a, button, label,select, input {
 	cursor: pointer;
 	-webkit-transition: color .3s, border-color .3s;
 	transition: color .3s, border-color .3s;

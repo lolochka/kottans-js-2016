@@ -3,7 +3,10 @@
 	<head>
     	<meta charset=utf-8>
         <title>Form</title>
-        <link href="src/css/style.css" rel="stylesheet">
+		<link href="css/reset.css" rel="stylesheet">
+		<link href="css/fontello.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,400italic" rel="stylesheet">
   	</head>
   	<body>
     	<header>
@@ -11,14 +14,14 @@
 				Go back
 			</a>
 			<a class="logo" href="/">
-				<img class="head-logo" src="src/images/logo.png" alt="">
+				<img class="head-logo" src="images/logo.png" alt="">
 			</a>
 			<a role="button" class="sign-in" href="/">
 				Sign in
 			</a>
 		</header>
 		<main>
-			<form class="order-form">
+			<form class="order-form" method="post" action="#">
 				<section class="your-order">
 					<div class="your-order-table-wrap">
 						<h1>Your order</h1>
@@ -38,7 +41,7 @@
 						</table>
 					</div>
 					<div class="your-order-btns-wrap">
-						<button class="place-order">
+						<button class="place-order" type="submit">
 							place order
 						</button>
 						<button class="print-quote">
@@ -50,22 +53,22 @@
 					<h1>Help center</h1>
 					<p>if you need asistance while placing your order? contact one of our beloved Project Manager by phone or email</p>
 					<p>
-					<address>
-						<a href="tel:971-0-555-555">+971 (0) 555 555</a> <a href="mailto:help@qtest.com">help@qtest.com</a>
-					</address>
+						<address>
+							<a href="tel:971-0-555-555">+971 (0) 555 555</a> <a href="mailto:help@qtest.com">help@qtest.com</a>
+						</address>
 					</p>
 				</section>
 				<section class="select-service">
 					<h1><span>Select what you want to translate</span></h1>
-					<input type="radio" name="service" value="website" id="website">
+					<input type="radio" name="service" value="website" id="website" required>
 					<label for="website">
 						<img src="images/website.png" alt="Website translation" title="Translate website">
 					</label>
-					<input type="radio" name="service" value="documents" id="documents">
+					<input type="radio" name="service" value="documents" id="documents" required>
 					<label for="documents">
 						<span><img src="images/documents.png" alt="Translate documents" title="Translate documents"></span>
 					</label>
-					<input type="radio" name="service" value="social" id="social">
+					<input type="radio" name="service" value="social" id="social" required>
 					<label for="social">
 						<img src="images/social.png" alt="Translate social account" title="Translate social account">
 					</label>
@@ -100,7 +103,7 @@
 					<h1>Choose your languages pairings</h1>
 					<p>
 						<label for="language-from">From</label>
-						<select class="select-language" name="language-from" id="language-from">
+						<select class="select-language" name="language-from" id="language-from" required>
 							<option value="en">English</option>
 							<option value="fr">French</option>
 							<option value="de">German</option>
@@ -109,7 +112,7 @@
 					</p>
 					<p>
 						<label for="language-to-1">To</label>
-						<select class="select-language" name="language-to-1" id="language-to-1">
+						<select class="select-language" name="language-to-1" id="language-to-1" required>
 							<option value="en">English</option>
 							<option value="fr">French</option>
 							<option value="de">German</option>
@@ -127,17 +130,17 @@
 				</section>
 				<section class="selecting-tone">
 					<h1>Select your desired tone</h1>
-					<input type="radio" name="tone" value="friendly" id="friendly">
+					<input type="radio" name="tone" value="friendly" id="friendly" required checked>
 					<label for="friendly">Friendly/Casual</label><br>
-					<input type="radio" name="tone" value="corporate" id="corporate">
+					<input type="radio" name="tone" value="corporate" id="corporate" required>
 					<label for="corporate">Corporate/Pro</label><br>
-					<input type="radio" name="tone" value="media" id="media">
+					<input type="radio" name="tone" value="media" id="media" required>
 					<label for="media">Media/Formal</label><br>
 				</section>
 				<section class="how-urgent">
 					<h1>Tell us how urgent this job is</h1>
 					<div class="urgent-range-wrap">
-						<input class="urgent-range" type="range" min="0" value="1" max="2" step="1">
+						<input class="urgent-range" type="range" min="0" value="1" max="2" step="1" id="urgent-range" name="urgent-range">
 						<ul class="urgent-range-labels">
 							<li>I got time</li>
 							<li>Average</li>
@@ -146,7 +149,7 @@
 					</div>
 					<section class="timeline-info">
 						<h2>Timeline info</h2>
-						<p>With an <output>Average</output> timeline set up, our expert translator can take a reasonable amount of time perfecting your translation</p>
+						<p>With an <output for="urgent-range">Average</output> timeline set up, our expert translator can take a reasonable amount of time perfecting your translation</p>
 					</section>
 				</section>
 				<section class="payment">
@@ -154,42 +157,44 @@
 					<p>Already have an account with us? <a href="#">Sign in</a></p>
 					<p class="user-details">
 						<label for="name">Full name<br>
-							<input type="text" id="name" name="full-name">
+							<input type="text" id="name" name="full-name" required>
 							<i class="validation"></i>
 						</label>
 					</p>
 					<p class="user-details">
 						<label for="email">Email address<br>
-							<input type="email" id="email" name="email">
+							<input type="email" id="email" name="email" required>
 							<i class="validation"></i>
 						</label>
 						<label for="password">Choose a password<br>
-							<input type="password" id="password" name="password">
+							<input type="password" id="password" name="password" required>
 							<i class="validation"></i>
 						</label>
 					</p>
 					<p class="payment-method">
-						<input type="radio" name="payment-method" value="card" id="card">
+						<input type="radio" name="payment-method" value="card" id="card" required checked>
 						<label for="card"><img src="images/card.png" alt="Card"></label>
-						<input type="radio" name="payment-method" value="paypal" id="paypal">
+						<input type="radio" name="payment-method" value="paypal" id="paypal" required>
 						<label for="paypal"><img src="images/paypal.png" alt="Paypal"></label>
-						<input type="radio" name="payment-method" value="amazon" id="amazon">
+						<input type="radio" name="payment-method" value="amazon" id="amazon" required>
 						<label for="amazon"><img src="images/amazon.png" alt="Amazon"></label>
 					</p>
 					<p class="card-details">		<label for="card-number">Card number<br>
-							<input type="text" name="card-number" id="card-number">
+							<input type="text" name="card-number" id="card-number" required>
 						</label>
 						<label for="exp-date">Expiry date<br>
 							<input type="date" name="exp-date" id="exp-date">
 						</label>
 						<label for="code">Code<br>
-							<input type="number" name="code" id="code">
+							<input type="number" name="code" id="code" required>
 						</label>
 					</p>
 				</section>
 				<footer class="submit-form">
-					<input type="checkbox" name="terms">I agree <a href="#">Terms &amp; Conditions</a>
-					<button class="place-order">
+					<p>
+						<input type="checkbox" name="terms" required>I agree <a href="#">Terms &amp; Conditions</a>
+					</p>
+					<button class="place-order" type="submit">
 						place order
 					</button>
 					<button class="print-quote">
@@ -198,27 +203,32 @@
 				</footer>
 			</form>
 		</main>
-		<footer>
-			<section class="we-do">
-				<h1>What we do</h1>
-				<p>Selfies chartreuse kickstarter, everyday carry williamsburg fingerstache helvetica. Cray vinyl retro, paleo keffiyeh cornhole typewriter art party.</p>
-			</section>
-			<section class="main-office">
-				<h1>Our main office</h1>
-				<address>
-					Dubai, UAE<br>
-					P.O. Box 502735<br>
-					Phone <a href="tel:971-0-555-555">+971 (0) 555 555</a>
-				</address>
-			</section>
-			<section class="connect">
-				<h1>Connect with us</h1>
-				<ul>
-					<li>Facebook</li>
-					<li>Twitter</li>
-					<li>Linkedin</li>
-				</ul>
-			</section>
+		<footer class="main-footer">
+			<div class="footer-wrap">
+				<section class="we-do">
+					<h1>What we do</h1>
+					<p>Selfies chartreuse kickstarter, everyday carry williamsburg fingerstache helvetica. Cray vinyl retro, paleo keffiyeh cornhole typewriter art party.</p>
+				</section>
+				<section class="main-office">
+					<h1>Our main office</h1>
+					<address>
+						<p>Dubai, UAE</p>
+						<p>P.O. Box 502735</p>
+						<p>Phone <a href="tel:971-0-555-555">+971 (0) 555 555</a></p>
+					</address>
+				</section>
+				<section class="connect">
+					<h1>Connect with us</h1>
+					<ul>
+						<li>Facebook</li>
+						<li>Twitter</li>
+						<li>Linkedin</li>
+					</ul>
+				</section>
+				<section class="footer-logo">
+					<img src="images/logo-footer.png" alt="logo" width="100">
+				</section>
+			</div>
 		</footer>
   	</body>
 </html>
